@@ -1,0 +1,14 @@
+@use "./mixins" as m;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Qanelas", sans-serif;
+  margin-top: 0;
+  background-color: #1e2538;
+  background-attachment: fixed;
+  background-image: url("../images/bgimage.png");
+  @include m.bgimage(100%, no-repeat, right top);
+}
+

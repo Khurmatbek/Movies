@@ -1,0 +1,100 @@
+@use "../mixins" as m;
+
+.header {
+  padding-top: 11px;
+}
+.header__wrapper {
+  @include m.flexbox(column, space-between, center);
+}
+.header__list-box {
+  width: 100%;
+  @include m.unlist;
+  @include m.flexbox(column, space-between, center);
+}
+.header__item-top {
+  width: 100%;
+  @include m.flexbox(row, space-between, center);
+  margin-bottom: 6px;
+}
+.header__form {
+  @include m.flexbox(row, space-between, center);
+}
+.site-menu-btn {
+  width: 28.6px;
+  height: 27px;
+  margin-right: 4.5px;
+  border-radius: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+.header__form-search-btn {
+  width: 28.6px;
+  height: 27px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: none;
+}
+.site-logo {
+  display: inline-block;
+}
+.header-login-btn {
+  max-width: 66px;
+  width: 100%;
+  padding: 6.5px 13px;
+  color: #fff;
+  text-align: center;
+  font-family: "Qanelas";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  border-radius: 5px;
+  background: #3657cb;
+  box-shadow: 0px 0px 2px 0px rgba(72, 113, 255, 0.8);
+}
+.header__item-middle {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 26px;
+}
+.header__link-vkontakte,
+.link-social {
+  text-decoration: none;
+  color: #686868;
+  font-family: "Font Awesome 5 Brands";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: color 0.6s ease;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.link-social:not(:last-child) {
+  margin-right: 8px;
+}
+.header__text {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-family: "Qanelas";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  &::after {
+    width: 14px;
+    height: 11px;
+    display: inline-block;
+    background-image: url("../../images/threeline.svg");
+    @include m.bgimage(100%, no-repeat, center);
+    content: "";
+  }
+}
+.text-box {
+  text-align: center;
+}

@@ -1,0 +1,15 @@
+@mixin flexbox($flex-direction, $justifiy-content, $align-itmes) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justifiy-content;
+  align-items: $align-itmes;
+}
+@mixin unlist {
+  padding: 0;
+  list-style: none;
+}
+@mixin bgimage( $bgsize, $bgrepeat, $bgpositision) {
+  background-size: $bgsize;
+  background-repeat: $bgrepeat;
+  background-position: $bgpositision;
+}
